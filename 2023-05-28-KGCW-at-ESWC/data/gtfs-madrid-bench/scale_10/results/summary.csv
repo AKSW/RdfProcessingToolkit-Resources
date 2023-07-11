@@ -1,0 +1,6 @@
+number_of_samples,step,duration,version,cpu_user_diff,cpu_system_diff,cpu_user_system_diff,cpu_idle_diff,cpu_iowait_diff,memory_ram_max,memory_swap_max,memory_ram_swap_max,memory_ram_min,memory_swap_min,memory_ram_swap_min,disk_read_count_diff,disk_write_count_diff,disk_read_bytes_diff,disk_write_bytes_diff,disk_read_time_diff,disk_write_time_diff,disk_busy_time_diff,network_received_count_diff,network_sent_count_diff,network_received_bytes_diff,network_sent_bytes_diff,network_received_error_diff,network_sent_error_diff,network_received_drop_diff,network_sent_drop_diff
+34,1,3.3904,2,9.95,0.98,10.93,97.36,0.0,28747243520,3158679552,31905923072,0,0,0,0,1526,0,10134528,0,30,168,43,54,8739,6505,0,0,0,0
+29,2,2.8774,2,8.4,0.68,9.08,82.91,0.0,28638453760,3158679552,31797133312,28188045312,3158679552,31346724864,0,1200,0,8421376,0,26,168,5,9,422,1054,0,0,0,0
+32,3,3.1887,2,10.49,0.83,11.32,90.2,0.01,28760166400,3158679552,31918845952,28183429120,3158679552,31342108672,0,742,0,5698560,0,14,128,46,46,8134,8337,0,0,0,0
+32,4,3.1839,2,10.42,0.82,11.24,90.43,0.0,28752625664,3158679552,31911305216,28199776256,3158679552,31358455808,2,1626,8192,10327040,0,37,148,17,22,1996,2899,0,0,0,0
+215,5,22.091,2,185.77,13.29,199.06,504.64,0.26,49941258240,3158679552,53099937792,28199858176,3158679552,31358537728,4,7340,16384,2299214848,0,122473,1096,108,127,20672,22623,0,0,0,0
