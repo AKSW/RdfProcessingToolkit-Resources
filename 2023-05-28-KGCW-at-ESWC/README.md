@@ -28,7 +28,7 @@ using RPT/Sansa.
 4. The right y-axis shows the CPU time scale factor. This shows the distributedness of the
 execution (higher = more distributed). It was calculated by dividing the CSV column
 `cpu_user_system_diff` by the duration.
-5. A red � mark shows the value of the `memory_ram_max` CSV column (memory consumption).
+5. A red *Ꮖ* mark shows the value of the `memory_ram_max` CSV column (memory consumption).
 The memory consumption is also displayed on the top x-axis. Note, that the measurement
 has very limited informative value because the tool captures the initial virtual memory
 claimed by the Java Virtual Machine (JVM, 28 GiB) and not the actually used memory.
