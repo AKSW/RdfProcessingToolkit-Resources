@@ -1,0 +1,1 @@
+  20000000 properties/1M_rows_20_columns/out.sorted.nt
