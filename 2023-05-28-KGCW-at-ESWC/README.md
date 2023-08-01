@@ -1,7 +1,7 @@
 # KGCW at ESWC 2023 Results for the RPT/SANSA RML Mapper
 
-The RML mapper is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
-
+* Scripts for generating the plots from the source data are in the [scripts] folder.
+* The RML mapper is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
 
 ## How to read the plots.
 
