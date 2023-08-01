@@ -1,6 +1,6 @@
 # KGCW at ESWC 2023 Results for the RPT/SANSA RML Mapper
 
-* Scripts for generating the plots from the source data are in the [scripts] folder.
+* Scripts for generating the plots from the source data are in the [scripts](scripts) folder.
 * The RML mapper is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
 
 ## How to read the plots.
