@@ -60,8 +60,6 @@ numbers are absolute, the plot only gives
 
 ### gtfs-heterogeneity
 
-**Note**: the nested case is broken (it did not create any output; to be fixed)
-
 ![](images/gtfs-heterogeneity.png)
 
 ### gtfs-scale.
