@@ -58,6 +58,7 @@ xticklabel={%
 \pgfmathsetmacro\Seconds{(\value-(\Minutes*60))/100}%
 \pgfmathprintnumber{\Minutes}:\pgfmathprintnumber[fixed, fixed zerofill, skip 0.=true, dec sep={}]{\Seconds}%
 },
+scaled x ticks=false,
 ylabel={\large @LABEL@},
 ytick=data,
 yticklabel style={text width=5em,anchor=east,align=right},
