@@ -1,0 +1,177 @@
+\begin{tikzpicture}
+\pgfdeclareplotmark{beam}{%
+\pgfusepathqstroke
+\draw[line width=1pt] (0\pgfplotmarksize,-1.4\pgfplotmarksize) -- (0\pgfplotmarksize,1.4\pgfplotmarksize);
+\draw[line width=1pt] (-.7\pgfplotmarksize,-1.4\pgfplotmarksize) -- (.7\pgfplotmarksize,-1.4\pgfplotmarksize);
+\draw[line width=1pt] (-.7\pgfplotmarksize,1.4\pgfplotmarksize) -- (.7\pgfplotmarksize,1.4\pgfplotmarksize);
+}
+
+\pgfplotsset{set layers}
+
+\begin{axis}[
+scale only axis,
+height=@HEIGHT@,
+tick pos=upper,
+scaled ticks=manual:{}{\pgfmathparse{#1/1073741824}},%1024^3
+xtick={30064771072,34359738368,...,69793218560},%28, 32..64
+xlabel={memory consumption in GiB},
+axis x line*=top,
+axis y line*=right,
+symbolic y coords={@Y-COORDS@},
+ylabel={cpu time scale},
+% enlargelimits=0.15,
+%enlarge x limits=0.25,
+enlarge x limits=0.1,
+enlarge y limits=@ENLARGE-Y@,
+xmin=27917287424,xmax=71940702208,
+legend style={%at={(-0.04,1.2)},
+at={(1.1,@LEGEND-Y-MEM@)},
+anchor=north east,
+legend columns=-1},
+% nodes near coords,
+% nodes near coords defaults,
+nodes near coords align={horizontal},
+cycle list={{white,mark=none},},
+mark size=4pt,only marks,
+% point meta=rawx,
+xminorgrids,
+minor xtick=data,
+ytick=data,
+yticklabels={@CPU-SCALE@},
+]
+@MAX-MEMORY@
+\legend{}
+\end{axis}
+
+\begin{axis}[
+scale only axis,
+height=@HEIGHT@,
+log origin=infty,@LOG-SCALE@
+xbar stacked,
+xmin=@XMIN-DURATION@,
+tick pos=lower,
+xlabel={@HACK-1@run-time in sec.@LOG-SCALE-INFO@},
+ylabel={\large @LABEL@},
+ytick=data,
+yticklabel style={text width=5em,anchor=east,align=right},
+axis x line*=bottom,
+axis y line*=left,
+symbolic y coords={@Y-COORDS@},
+cycle list={@STEPS-CYCLE-LIST@},
+legend style={%at={(-0.04,1.2)},
+at={(-0.32,@LEGEND-Y-TRIPLES@)},
+anchor=north west,
+legend columns=-1},
+enlarge x limits={upper,value=0.25},
+enlarge y limits=@ENLARGE-Y@,
+% nodes near coords,
+nodes near coords defaults,
+nodes near coords align={horizontal},
+point meta=rawx,
+]
+@DURATION@
+\legend{@STEPS-LEGEND@}
+\end{axis}
+
+
+\begin{axis}[
+scale only axis,
+height=@HEIGHT@,
+log origin=infty,@LOG-SCALE@
+xbar={2.5pt},
+xmin=@XMIN-SIZE@,
+bar width=3pt,
+bar shift=-8.4pt,
+%ticks=none,
+axis x line*=bottom,
+axis y line=none,
+symbolic y coords={@Y-COORDS@},
+legend style={%at={(-0.04,1.2)},
+at={(1.1,@LEGEND-Y-TRIPLES@)},
+anchor=north east,
+legend columns=-1},
+enlarge x limits={upper,value=0.3},
+enlarge y limits=@ENLARGE-Y@,
+% nodes near coords,
+nodes near coords defaults,
+nodes near coords align={horizontal},
+point meta=rawx,
+% indicate io size
+xtick style={densely dotted,black,semithick,},
+xlabel={\small ------  i/o size ------ },
+scaled ticks=manual:{}{},
+every axis x label/.style={
+at={(@IO-SIZE-LABEL-POS@)},anchor=center,
+},
+major tick length=1.8\baselineskip,
+xmajorgrids=true,
+x grid style={densely dotted,black},
+xtick={@TRIPLES-PER-CENT@},
+xticklabels={@TRIPLES-PER-CENT-LABEL@},
+xticklabel style={font=\small},
+xtick align=outside,
+]
+@TRIPLES@  
+\legend{triples@TRIPLES-LOG@}
+\end{axis}
+
+\begin{axis}[
+scale only axis,
+height=@HEIGHT@,
+log origin=infty,@LOG-SCALE@
+xbar stacked,
+xmin=@XMIN-SIZE@,
+bar width=3pt,
+bar shift=8.6pt,
+ticks=none,
+axis x line=none,
+axis y line=none,
+symbolic y coords={@Y-COORDS@},
+cycle list={@INPUT-COLORS@},
+legend style={%at={(-0.04,1.2)},
+at={(-0.32,@LEGEND-Y-MEM@)},
+anchor=north west,
+legend columns=-1},
+enlarge x limits={upper,value=0.3},
+enlarge y limits=@ENLARGE-Y@,
+% nodes near coords,
+nodes near coords defaults,
+nodes near coords align={horizontal},
+point meta=rawx,
+]
+@INPUT-SIZES@
+\legend{@INPUT-TYPES@ input size@TRIPLES-LOG@}
+\end{axis}
+
+\begin{axis}[
+scale only axis,
+height=@HEIGHT@,
+tick pos=upper,
+scaled ticks=manual:{}{\pgfmathparse{#1/1073741824}},%1024^3
+xtick=\empty,
+xlabel={},
+axis x line=none,
+axis y line=none,
+symbolic y coords={@Y-COORDS@},
+ylabel={},
+% enlargelimits=0.15,
+%enlarge x limits=0.25,
+enlarge x limits=0.1,
+enlarge y limits=@ENLARGE-Y@,
+xmin=27917287424,xmax=71940702208,
+legend style={%at={(-0.04,1.2)},
+at={(1.1,@LEGEND-Y-MEM@)},
+anchor=north east,
+legend columns=-1},
+% nodes near coords,
+% nodes near coords defaults,
+nodes near coords align={horizontal},
+cycle list={{red,mark=beam},},
+mark size=4pt,only marks,
+% point meta=rawx,
+]
+@MAX-MEMORY@
+\legend{@MEM-LEGEND@}
+\end{axis}
+
+\end{tikzpicture}

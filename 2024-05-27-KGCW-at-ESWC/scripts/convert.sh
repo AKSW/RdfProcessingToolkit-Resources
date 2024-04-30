@@ -4,8 +4,9 @@
 HEADER=`cat <<END
 \documentclass{standalone}
 \usepackage{pgfplots}
+\usepgflibrary{fpu}
 \let\fax\relax%
-%\usepackage{marvosym}
+\usepackage{marvosym}
 %\usepackage{tikz}
 \pgfplotsset{width=9.5cm,compat=1.18}
 \begin{document}

@@ -1,0 +1,1 @@
+  20000000 records/1M_rows_20_columns/out.sorted.nt
