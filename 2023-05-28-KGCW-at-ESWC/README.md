@@ -7,8 +7,8 @@
 
 These results were obtained by running RdfProcessingToolkit on the following system:
 
-| Hardware |                                        |
-+-------------+-------------------------------------+
+| Hardware    |                                     |
+|-------------|-------------------------------------|
 | CPU         | AMD Ryzen 9 5950X 16-Core Processor |
 | Threads     | 32                                  |
 | RAM         | 128 GiB                             |
