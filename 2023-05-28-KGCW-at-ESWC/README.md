@@ -1,7 +1,20 @@
-# KGCW at ESWC 2023 Results for the RPT/SANSA RML Mapper
+# KGCW at ESWC 2023 Results for the RPT/SANSA RML Engine
 
 * Scripts for generating the plots from the source data are in the [scripts](scripts) folder.
-* The RML mapper is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
+* The RML engine is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
+
+## Benchmark system
+
+These results were obtained by running RdfProcessingToolkit on the following system:
+
+| Hardware |                                        |
++-------------+-------------------------------------+
+| CPU         | AMD Ryzen 9 5950X 16-Core Processor |
+| Threads     | 32                                  |
+| RAM         | 128 GiB                             |
+| Java memory | 60 GiB                              |
+| Harddisk    | Samsung Datacenter nVME SSD PM9A3   |
+| Disk Size   | 4 TB                                |
 
 ## How to read the plots.
 
