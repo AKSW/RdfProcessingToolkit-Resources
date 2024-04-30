@@ -9,7 +9,7 @@
 These results were obtained by running RdfProcessingToolkit on the VM sponsored by Orange:
 
 | Hardware    |                                    |
-+-------------+------------------------------------+
+|-------------|------------------------------------|
 | CPU         | Intel(R) Xeon(R) Gold 6161 CPU     |
 | Threads     | 4                                  |
 | RAM         | 16 GiB                             |
