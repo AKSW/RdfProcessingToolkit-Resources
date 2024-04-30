@@ -19,7 +19,7 @@
 3. Unzip results.zip
 4. Move results root into `../data`:
    ```
-   mv home/cloud/kg-construct-challenge-tool/downloads/eswc-kgc-challenge-2024 ../data
+   mv home/cloud/kg-construct-challenge-tool/downloads/eswc-kgc-challenge-2024/* ../data
    ```
 
 ## Calculate input data sizes
