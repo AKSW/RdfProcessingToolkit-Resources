@@ -1,26 +1,29 @@
-# KGCW at ESWC 2023 Results for the RPT/SANSA RML Engine
+# KGCW at ESWC 2024 Results for the RPT/SANSA RML Engine
 
 * Scripts for generating the plots from the source data are in the [scripts](scripts) folder.
 * The RML engine is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
+* This is a re-run of the [2023 Benchmark](../2023-05-28-KGCW-at-ESWC), but on the VM sponsored by Orange.
 
 ## Benchmark system
 
-These results were obtained by running RdfProcessingToolkit on the following system:
+These results were obtained by running RdfProcessingToolkit on the VM sponsored by Orange:
 
-| Hardware |                                        |
-+-------------+-------------------------------------+
-| CPU         | AMD Ryzen 9 5950X 16-Core Processor |
-| Threads     | 32                                  |
-| RAM         | 128 GiB                             |
-| Java memory | 60 GiB                              |
-| Harddisk    | Samsung Datacenter nVME SSD PM9A3   |
-| Disk Size   | 4 TB                                |
+| Hardware    |                                    |
++-------------+------------------------------------+
+| CPU         | Intel(R) Xeon(R) Gold 6161 CPU     |
+| Threads     | 4                                  |
+| RAM         | 16 GiB                             |
+| Java memory | 5 GiB                              |
+| Harddisk    | VMware virtual disk                |
+| Disk Size   | 136 GB                             |
+
+Thus we can compare how RPT works on weaker hardware.
 
 ## How to read the plots.
 
 The following plots summarize the statistics obtained in the challenge.
 
-![](images/join-5-5-modified.png)
+![](../2023-05-28-KGCW-at-ESWC/images/join-5-5-modified.png)
 
 Each of the following plots captures all of the following information.
 In order to assist the reader, we added circled numbers to Figure 1 which correspond to the
