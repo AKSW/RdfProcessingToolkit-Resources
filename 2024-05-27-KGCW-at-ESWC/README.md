@@ -4,6 +4,15 @@
 * The RML engine is part of [RdfProcessingToolkit](https://github.com/SmartDataAnalytics/RdfProcessingToolkit).
 * This is a re-run of the [2023 Benchmark](../2023-05-28-KGCW-at-ESWC), but on the VM sponsored by Orange.
 
+## Note on GTFS 1000
+For this task the disk space was not sufficient, so we created a compressed volume and mounted it using the following commands:
+
+```bash
+fallocate -l 120G test.btrfs
+mkfs.btrfs ./test.btrfs
+mount -o loop,compress=lzo ./test.btrfs /compressed-fs
+```
+
 ## Benchmark system
 
 These results were obtained by running RdfProcessingToolkit on the VM sponsored by Orange:
